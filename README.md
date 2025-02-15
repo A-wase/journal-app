@@ -1,5 +1,6 @@
 # Digital Journal App
 
+## NOT FINISHED! STILL IN DEVELOPMENT! BUT FEEL FREE TO CHECK WHAT I HAVE MADE! HELP WELCOMED!!!
 A Streamlit-based web application for maintaining a personal journal with rich analytics and data persistence.
 
 ![App Screenshot](https://via.placeholder.com/800x400.png?text=Digital+Journal+App+Screenshot)
