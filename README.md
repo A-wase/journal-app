@@ -6,7 +6,7 @@ A Streamlit-based web application for maintaining a personal journal with rich a
 ![App Screenshot](https://via.placeholder.com/800x400.png?text=Digital+Journal+App+Screenshot)
 
 ## Why I made this journal app
-I created this journal app for personal use and as a way to learn more about the Streamlit library and SQLite. Initially, I planned to build this project using Tkinter and to export the database into Microsoft Excel. However, as I worked on improving my programming skills, I researched better database management solutions beyond simple Excel file exports. Thatâ€™s when I decided to use SQLite.
+I created this journal app for personal use and as a way to learn more about the Streamlit library and SQLite. Initially, I planned to build this project using Tkinter and to export the database into Microsoft Excel. However, as I worked on improving my programming skills, I researched better database management solutions beyond simple Excel file exports. Thatâ€™s when I discovered and decided to use SQLite.
 
 While saving data as an Excel or CSV file might have been a viable alternative, I believe that Excel spreadsheets could become slow when handling large amounts of data and this could negatively impact the app's usage in the future. More importantly, my main goal was to learn, experiment, and grow as a developer. I was particularly excited to discover Streamlit and explore SQL-based data management within my own project.
 
@@ -56,7 +56,7 @@ In the end, I successfully built this simple yet functional journal app, and Iâ€
 
 ## To run
 
-2. **In terminal run**:
+1. **In terminal run**:
    ```bash
    streamlit run journal_app.py
 
@@ -68,11 +68,11 @@ In the end, I successfully built this simple yet functional journal app, and Iâ€
 **Navigation:**
 - Use the sidebar to switch between pages
 
-**Four main sections:**
-- Write: Create new journal entries
-- Read: Browse and manage existing entries
-- Analytics: View journaling statistics
-- Settings: Configure display preferences
+**Four main siderbar sections:**
+- **Write:** Create new journal entries
+- **Read:** Browse and manage existing entries
+- **Analytics:** View journaling statistics
+- **Settings:** Configure display preferences
 
 ## Data Management:
 - Entries automatically saved on submission
@@ -81,3 +81,4 @@ In the end, I successfully built this simple yet functional journal app, and Iâ€
 
 ## Acknowledgments
 - Built with Streamlit in Python
+- Thanks to [this YouTube video](https://www.youtube.com/watch?v=byHcYRpMgI4) by freeCodeCamp.org for teaching me SQLite Databases in Python
