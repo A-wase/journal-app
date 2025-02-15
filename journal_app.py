@@ -1,20 +1,20 @@
-import streamlit as st
+import streamlit as st # Streamlit made this whole app much easier than my initial Tkinter plan.
 import sqlite3
 import datetime
 import pandas as pd
 
 # Helper functions
-def get_ordinal_suffix(day):
-    if 11 <= (day % 100) <= 13:
-        return 'th'
-    return {1: 'st', 2: 'nd', 3: 'rd'}.get(day % 10, 'th')
-
 def format_full_date(date_obj):
     day_name = date_obj.strftime("%A")
     day = date_obj.day
     suffix = get_ordinal_suffix(day)
     month_year = date_obj.strftime("%B %Y")
     return f"{day_name}, {day}{suffix} {month_year}"
+
+def get_ordinal_suffix(day):
+    if 11 <= (day % 100) <= 13:
+        return 'th'
+    return {1: 'st', 2: 'nd', 3: 'rd'}.get(day % 10, 'th')
 
 # Database setup
 def get_db_connection():
@@ -54,13 +54,13 @@ def delete_entry(entry_id):
     conn.commit()
     conn.close()
 
-# Initialize database and settings
+# Initialise database and settings
 init_db()
 
 # Page configuration
 st.set_page_config(page_title="Digital Journal", layout="wide")
 
-# Session state initialization
+# Session state initialisation
 if 'settings' not in st.session_state:
     conn = get_db_connection()
     cursor = conn.cursor()
@@ -68,7 +68,7 @@ if 'settings' not in st.session_state:
     st.session_state.settings = {row['setting_name']: row['setting_value'] for row in cursor.fetchall()}
     conn.close()
 
-# Navigation
+# Navigation Sidebar
 page = st.sidebar.radio("Navigation", ["Write", "Read", "Analytics", "Settings"])
 
 # Write Page
@@ -145,7 +145,7 @@ elif page == "Read":
     entries = cursor.fetchall()
     conn.close()
 
-    # Display entries with delete buttons
+    # Displaying entries
     if not entries:
         st.info("No entries found matching the current filters.")
     else:
@@ -156,7 +156,7 @@ elif page == "Read":
                     st.subheader("Details")
                     st.write(f"**Date:** {entry['full_date']}")
                     
-                    # Time formatting based on settings
+                    # Time formatting from option in the settings page
                     time_str = entry['entry_time']
                     if st.session_state.settings.get('time_format') == '12-hour':
                         time_obj = datetime.datetime.strptime(time_str, "%H:%M")
