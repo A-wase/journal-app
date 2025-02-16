@@ -81,4 +81,4 @@ In the end, I successfully built this simple yet functional journal app, and Iâ€
 
 ## Acknowledgments
 - Built with Streamlit in Python
-- Thanks to [this YouTube video](https://www.youtube.com/watch?v=byHcYRpMgI4) by freeCodeCamp.org for teaching me SQLite Databases in Python
+- Thanks to the [Python documentation page about the SQLite3 module](https://docs.python.org/3/library/sqlite3.html#sqlite3-tutorial) for introducing me to how SQLite3 works, and also, thanks to [this YouTube video](https://www.youtube.com/watch?v=byHcYRpMgI4) by freeCodeCamp.org for ironing out my knowledge on SQLite3.
