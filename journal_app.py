@@ -58,7 +58,11 @@ def delete_entry(entry_id):
 init_db()
 
 # Page configuration
-st.set_page_config(page_title="Digital Journal", layout="wide")
+st.set_page_config(page_title="Digital Journal", page_icon="📔", layout="wide", initial_sidebar_state="auto",  menu_items={
+        'Get Help': None,
+        'Report a bug': "https://github.com/A-wase/journal-app/pulls",
+        'About': "# This is a header. This is an *extremely* cool app!"
+    })
 
 # Session state initialisation
 if 'settings' not in st.session_state:
