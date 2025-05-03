@@ -79,6 +79,22 @@ In the end, I successfully built this simple yet functional journal app, and I�
 - Deleted entries are permanently removed
 - Database stored in journal.db file
 
+### 🗃️ Storage Format Comparison
+
+| Feature               | SQLite3        | JSON Files      | CSV Files       | Markdown Files   |
+|-----------------------|----------------|------------------|------------------|------------------|
+| Structured Data       | ✅ Yes         | ✅ Yes           | ⚠️ Limited       | ⚠️ Limited       |
+| Scalability           | ✅ High        | ⚠️ Medium        | ❌ Low           | ❌ Low           |
+| Search & Filtering    | ✅ Advanced    | ⚠️ Manual Coding | ❌ Basic Only    | ❌ Manual Only   |
+| Tagging Support       | ✅ Native Schema | ⚠️ Manual Logic | ❌ None          | ⚠️ With Frontmatter |
+| Stats & Analytics     | ✅ Easy (SQL)  | ⚠️ Manual        | ⚠️ Manual        | ❌ Difficult     |
+| Performance (Large Data) | ✅ Fast    | ⚠️ Slower (in-memory) | ⚠️ Slow         | ❌ Very Slow     |
+| Portability & Backup  | ✅ Single File | ✅ Folder-based  | ✅ Single File   | ✅ Folder-based  |
+| Readability (Raw Data)| ⚠️ Moderate   | ✅ High          | ✅ High          | ✅ Very High     |
+
+> ✅ = Good / Recommended, ⚠️ = Possible but needs effort, ❌ = Poor or impractical
+
+
 ## Acknowledgments
 - Built with Streamlit in Python
 - Thanks to the [Python documentation page about the SQLite3 module](https://docs.python.org/3/library/sqlite3.html#sqlite3-tutorial) for introducing me to how SQLite3 works, and also, thanks to [this YouTube video](https://www.youtube.com/watch?v=byHcYRpMgI4) by freeCodeCamp.org for ironing out my knowledge on SQLite3.
