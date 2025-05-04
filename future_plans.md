@@ -2,6 +2,8 @@
 *This is where I’ll dump all my ideas to organise future features and development. If only there were some kind of app designed specifically for jotting down thoughts and plans... oh well, guess I’ll just use this file.*
 
 ## Top of the list...
+https://www.sqlitetutorial.net/sqlite-import-csv/
+CONVERT csv TO sqlite3
    * PDF exports
    * Writing streak counter
    * Photo attachments
