@@ -1,5 +1,5 @@
 # Logbook
-Welcome to my logbook: a personal and reflective journal capturing my thinking process, decisions, and experiments. This space serves as a non-linear record of ideas, insights, and progress, offering a glimpse into the journey behind the work. It is similar to `CHANGELOG.md` but less technical. Logbooks are looser by nature: notes, drafts, brainstorming and many abandoned ideas. Keeping it separate from `CHANGELOG.md` encourages more honest and useful reflection from myself... If only there were some kind of app designed specifically for jotting down thoughts and plans... oh well, guess I’ll just use this file.
+Welcome to my logbook: a personal and reflective journal capturing my thinking process, decisions, and experiments. This space serves as a record of ideas, insights, and progress, offering a glimpse into the journey behind the work. It is similar to `CHANGELOG.md` but less technical. Logbooks are looser by nature: notes, drafts, brainstorming and many abandoned ideas. Keeping it separate from `CHANGELOG.md` encourages more honest and useful reflection from myself... If only there were some kind of app designed specifically for jotting down thoughts and plans... oh well, guess I’ll just use this file.
 
 ## [LOG: 1] 06-MAY-2025
 ### **App data conversion**
@@ -28,7 +28,22 @@ My solution: I will instead choose to use the CSV file and clean that up and the
 
 To improve modularity, privacy, and flexibility, I decided to separate user content from app configuration by creating two SQLite databases:
 
-* `journal.db`: Stores user-generated content such as journal entries, moods, activities, and notes.
+* `my_journal.db`: Stores user-generated content such as journal entries, moods, activities, and notes.
 * `settings.db`: Stores in-app settings like UI themes, preferences, and custom configurations.
 
 This structure allows users to export/share only their journal data without exposing personal settings. It also enables settings sharing between users without affecting journal content. This separation improves maintainability, supports safer imports/exports, and lays the groundwork for potential features like theme sharing or settings versioning.  I will then chnage my old SQL database schema to match the new one.
+
+## 🗃️ Storage Format Comparison
+
+| Feature               | SQLite3        | JSON Files      | CSV Files       | Markdown Files   |
+|-----------------------|----------------|------------------|------------------|------------------|
+| Structured Data       | ✅ Yes         | ✅ Yes           | ⚠️ Limited       | ⚠️ Limited       |
+| Scalability           | ✅ High        | ⚠️ Medium        | ❌ Low           | ❌ Low           |
+| Search & Filtering    | ✅ Advanced    | ⚠️ Manual Coding | ❌ Basic Only    | ❌ Manual Only   |
+| Tagging Support       | ✅ Native Schema | ⚠️ Manual Logic | ❌ None          | ⚠️ With Frontmatter |
+| Stats & Analytics     | ✅ Easy (SQL)  | ⚠️ Manual        | ⚠️ Manual        | ❌ Difficult     |
+| Performance (Large Data) | ✅ Fast    | ⚠️ Slower (in-memory) | ⚠️ Slow         | ❌ Very Slow     |
+| Portability & Backup  | ✅ Single File | ✅ Folder-based  | ✅ Single File   | ✅ Folder-based  |
+| Readability (Raw Data)| ⚠️ Moderate   | ✅ High          | ✅ High          | ✅ Very High     |
+
+> ✅ = Good / Recommended, ⚠️ = Possible but needs effort, ❌ = Poor or impractical

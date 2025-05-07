@@ -40,6 +40,12 @@ In the end, I successfully built this simple yet functional journal app, and I�
   - Days with entries
 - Interactive date range filtering
 
+### Analytics Dashboard Screenshots:
+![Mood Distribution Graph](./images/mood_distribution_graph.png)
+![Mood Timeline Graph](images/mood_timeline.png)
+<sub><b>Fun Fact:</b> The analytics graphs here display real data from my personal journal, which I’ve kept since early 2017. I reverse-engineered and decrypted data from an old app to convert and import it into my own SQLite-based journal. More details are in [LOG: 1] in <code>LOGBOOK.md</code>.</sub>
+
+
 ### ⚙️ Settings
 - 12/24 hour time format preference
 
@@ -62,7 +68,7 @@ In the end, I successfully built this simple yet functional journal app, and I�
 
 ## Usage
 **First Run:**
-- Automatically creates journal.db database
+- Automatically creates `my_journal.db` and `settings.db` databases.
 - Default settings initialised
 
 **Navigation:**
@@ -77,23 +83,7 @@ In the end, I successfully built this simple yet functional journal app, and I�
 ## Data Management:
 - Entries automatically saved on submission
 - Deleted entries are permanently removed
-- Database stored in journal.db file
-
-### 🗃️ Storage Format Comparison
-
-| Feature               | SQLite3        | JSON Files      | CSV Files       | Markdown Files   |
-|-----------------------|----------------|------------------|------------------|------------------|
-| Structured Data       | ✅ Yes         | ✅ Yes           | ⚠️ Limited       | ⚠️ Limited       |
-| Scalability           | ✅ High        | ⚠️ Medium        | ❌ Low           | ❌ Low           |
-| Search & Filtering    | ✅ Advanced    | ⚠️ Manual Coding | ❌ Basic Only    | ❌ Manual Only   |
-| Tagging Support       | ✅ Native Schema | ⚠️ Manual Logic | ❌ None          | ⚠️ With Frontmatter |
-| Stats & Analytics     | ✅ Easy (SQL)  | ⚠️ Manual        | ⚠️ Manual        | ❌ Difficult     |
-| Performance (Large Data) | ✅ Fast    | ⚠️ Slower (in-memory) | ⚠️ Slow         | ❌ Very Slow     |
-| Portability & Backup  | ✅ Single File | ✅ Folder-based  | ✅ Single File   | ✅ Folder-based  |
-| Readability (Raw Data)| ⚠️ Moderate   | ✅ High          | ✅ High          | ✅ Very High     |
-
-> ✅ = Good / Recommended, ⚠️ = Possible but needs effort, ❌ = Poor or impractical
-
+- Database stored in my_journal.db file
 
 ## Acknowledgments
 - Built with Streamlit in Python
