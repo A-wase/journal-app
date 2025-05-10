@@ -57,3 +57,5 @@ You could argue that the CSV was sufficient, but it doesn’t satisfy me. The JS
 The reason I feel ready to tackle the JSON now is that I realised I was simply intimidated by the size of the data. After all, I’ve been using that journal for over ten years. I have written a lot! To better understand the JSON structure, I cloned the journal app on my phone and made test entries to see what a lightweight JSON file looks like. It turns out, the complexity wasn’t so scary after all. I can now read and understand the purpose of each line in the JSON. That’s proper reverse engineering right there!
 
 Once the JSON is cleaned, I’ll try converting it into a SQL database that my app can read.
+
+UPDATE: Yeah I give up. Today I was too optimistic. I cannot figure this JSON conversion. The CSV-to-SQLite database is already great and it is simple.
