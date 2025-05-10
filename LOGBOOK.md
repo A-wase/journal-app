@@ -47,3 +47,13 @@ This structure allows users to export/share only their journal data without expo
 | Readability (Raw Data)| ⚠️ Moderate   | ✅ High          | ✅ High          | ✅ Very High     |
 
 > ✅ = Good / Recommended, ⚠️ = Possible but needs effort, ❌ = Poor or impractical
+
+## [LOG: 2] 10-MAY-2025
+### **Attempting to clean decoded JSON data**
+To recap, the last time I decoded my journal data export from the app I use (created by other developers), I ended up with a large and complex JSON file containing both my journal and app data. I decided instead to convert the CSV export into a SQL database, attempting to auto-correct formatting issues and reconstruct each "mood" and "activity" entry manually. I succeeded in that, but I still feel I should have tried to clean and untangle the original JSON file. Today, I’m attempting to do just that.
+
+You could argue that the CSV was sufficient, but it doesn’t satisfy me. The JSON is the true data export, with everything formatted correctly. The CSV-to-SQL approach worked, but it was more of a temporary fix than a proper solution.
+
+The reason I feel ready to tackle the JSON now is that I realised I was simply intimidated by the size of the data. After all, I’ve been using that journal for over ten years. I have written a lot! To better understand the JSON structure, I cloned the journal app on my phone and made test entries to see what a lightweight JSON file looks like. It turns out, the complexity wasn’t so scary after all. I can now read and understand the purpose of each line in the JSON. That’s proper reverse engineering right there!
+
+Once the JSON is cleaned, I’ll try converting it into a SQL database that my app can read.
