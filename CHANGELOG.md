@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file. `CHANGELOG.md` is for myself, contributors, or collaborators to track technical updates (features, fixes, versions).
 
+## [TB0.1.1] - 16-MAY-2025
+### Added
+- Basic write page widgets.
+
 ## [TB0.1.0] - 16-MAY-2025
 ### Added
 - Initial offline version of the Journal app using Tkinter and ttkbootstrap.
