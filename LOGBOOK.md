@@ -58,4 +58,10 @@ The reason I feel ready to tackle the JSON now is that I realised I was simply i
 
 Once the JSON is cleaned, I’ll try converting it into a SQL database that my app can read.
 
-UPDATE: Yeah I give up. Today I was too optimistic. I cannot figure this JSON conversion. The CSV-to-SQLite database is already great and it is simple.
+UPDATE: Yeah I give up. Today I was too optimistic. I cannot clean this JSON file. The CSV-to-SQLite database is already great and it is simple so I will continute with that database and schema.
+
+## [LOG: 3] 16-MAY-2025o
+### **Creating a offline desktop version**
+Today, I began creating a Tkinter version of the Journal app using ttkbootstrap, a modernised take on Tkinter that offers updated widgets, themes, and styling. I originally built the app in Streamlit to learn that framework, but an offline version feels more appropriate for a personal journal, especially for privacy-conscious users. While the Streamlit version stores data locally in an SQLite database (never online), having a fully offline interface reinforces that feeling security. Streamlit is just the frontend; the offline SQLite database is where the real functionality lies.
+
+Plus, I prefer the higher level of control over styling offered to me by ttkbootstrap compared to Streamlit.
